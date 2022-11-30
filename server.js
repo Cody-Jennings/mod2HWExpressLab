@@ -7,7 +7,7 @@ const app = express();
 const port = 3000;
 
 const fs = require('fs') 
-app.engine('one', (filePath, options, callback) => { // define the view engine called
+app.engine('madeline', (filePath, options, callback) => { // define the view engine called
   fs.readFile(filePath, (err, content) => {
     if (err) return callback(err)
     // this is an extremely simple view engine we'll be more complex later
@@ -19,7 +19,7 @@ app.engine('one', (filePath, options, callback) => { // define the view engine c
   })
 })
 app.set('views', './views') // specify the views directory
-app.set('view engine', 'one') 
+app.set('view engine', 'madeline') 
 
 
 
